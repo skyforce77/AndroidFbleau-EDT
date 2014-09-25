@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Emploi du temps</string>
+    <string name="title_section1">DUTFI1</string>
+    <string name="title_section2">DUTFI2</string>
+    <string name="title_section3">DUTFA2</string>
+    <string name="title_section4">LBDISE</string>
+    <string name="navigation_drawer_open">Ouvrir la navigation</string>
+    <string name="navigation_drawer_close">Fermer la navigation</string>
+    <string name="action_webedt">Voir sur le site</string>
+    <string name="action_fails">Absences</string>
+    <string name="voir_new">En cours</string>
+    <string name="voir_newp">Prochain</string>
+
+</resources>

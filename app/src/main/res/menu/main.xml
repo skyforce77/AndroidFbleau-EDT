@@ -1,0 +1,18 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".MainActivity" >
+    <item android:id="@+id/action_new"
+        android:title="@string/voir_new"
+        android:showAsAction="withText|ifRoom" />
+    <item android:id="@+id/action_newp"
+        android:title="@string/voir_newp"
+        android:showAsAction="withText|ifRoom" />
+    <item android:id="@+id/action_webedt"
+        android:title="@string/action_webedt"
+        android:orderInCategory="100"
+        android:showAsAction="never" />
+    <item android:id="@+id/action_fails"
+        android:title="@string/action_fails"
+        android:orderInCategory="100"
+        android:showAsAction="never" />
+</menu>
