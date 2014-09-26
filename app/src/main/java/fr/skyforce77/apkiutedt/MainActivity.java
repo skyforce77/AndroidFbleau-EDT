@@ -11,8 +11,10 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
+import android.webkit.WebChromeClient;
 import android.webkit.WebSettings;
 import android.webkit.WebView;
+import android.widget.ProgressBar;
 
 
 public class MainActivity extends Activity
@@ -48,6 +50,17 @@ public class MainActivity extends Activity
         WebSettings settings = web.getSettings();
         settings.setBuiltInZoomControls(true);
         settings.setAppCacheEnabled(true);
+
+        ProgressBar bar = (ProgressBar) findViewById(R.id.progressBar);
+        bar.setMax(100);
+
+        web.setWebChromeClient(new WebChromeClient() {
+            public void onProgressChanged(WebView view, int progress) {
+                ProgressBar bar = (ProgressBar) findViewById(R.id.progressBar);
+                sout
+                bar.setProgress(progress);
+            }
+        });
 
         instance = this;
         MainActivity.updateImage(getString(R.string.title_section1));

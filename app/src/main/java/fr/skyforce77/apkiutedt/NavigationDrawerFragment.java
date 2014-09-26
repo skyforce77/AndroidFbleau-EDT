@@ -253,7 +253,7 @@ public class NavigationDrawerFragment extends Fragment {
 
         String section = (String)mDrawerListView.getAdapter().getItem(mCurrentSelectedPosition);
         if (item.getItemId() == R.id.action_webedt) {
-            String url = "http://www.iut-fbleau.fr/EDT/consulter/voir_newp.php?p="+section;
+            String url = "http://www.iut-fbleau.fr/EDT/consulter/voir_"+(MainActivity.instance.newp ? "newp" : "new")+".php?p="+section;
             Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse(url));
             startActivity(browserIntent);
             return true;

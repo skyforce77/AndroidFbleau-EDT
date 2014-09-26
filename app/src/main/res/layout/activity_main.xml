@@ -5,14 +5,16 @@
     android:id="@+id/drawer_layout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".MainActivity"
+    android:background="@android:color/background_light"
+    android:addStatesFromChildren="false">
 
     <!-- As the main content view, the view below consumes the entire
          space available using match_parent in both dimensions. -->
     <FrameLayout
         android:id="@+id/container"
         android:layout_width="match_parent"
-        android:layout_height="match_parent" >
+        android:layout_height="match_parent">
 
         <WebView
             android:layout_width="wrap_content"
@@ -22,7 +24,14 @@
             android:focusable="false"
             android:scrollbarAlwaysDrawHorizontalTrack="false"
             android:scrollbarAlwaysDrawVerticalTrack="false"
-            android:saveEnabled="true" />
+            android:saveEnabled="true"
+            android:isScrollContainer="true" />
+
+        <ProgressBar
+            android:layout_width="58dp"
+            android:layout_height="58dp"
+            android:id="@+id/progressBar"
+            android:layout_gravity="center" />
 
     </FrameLayout>
 

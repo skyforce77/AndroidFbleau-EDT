@@ -13,6 +13,6 @@
         android:showAsAction="never" />
     <item android:id="@+id/action_fails"
         android:title="@string/action_fails"
-        android:orderInCategory="100"
+        android:orderInCategory="101"
         android:showAsAction="never" />
 </menu>
