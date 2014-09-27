@@ -57,8 +57,13 @@ public class MainActivity extends Activity
         web.setWebChromeClient(new WebChromeClient() {
             public void onProgressChanged(WebView view, int progress) {
                 ProgressBar bar = (ProgressBar) findViewById(R.id.progressBar);
-                sout
-                bar.setProgress(progress);
+                if(progress != 100) {
+                    bar.setIndeterminate(false);
+                    bar.setVisibility(View.VISIBLE);
+                    bar.setProgress(progress);
+                } else {
+                    bar.setVisibility(View.INVISIBLE);
+                }
             }
         });
 
@@ -132,8 +137,12 @@ public class MainActivity extends Activity
             url = url.replace("voir_new.php", "voir_newp.php");
         }
         WebView webView = (WebView)MainActivity.instance.findViewById(R.id.webView);
-        if(!url.equals(webView.getUrl()))
+        if(!url.equals(webView.getUrl())) {
+            ProgressBar bar = (ProgressBar)MainActivity.instance.findViewById(R.id.progressBar);
+            bar.setIndeterminate(true);
+            bar.setProgress(0);
             webView.loadUrl(url);
+        }
     }
 
     /**

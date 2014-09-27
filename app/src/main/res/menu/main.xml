@@ -1,5 +1,6 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
+    android:theme="@style/AppTheme"
     tools:context=".MainActivity" >
     <item android:id="@+id/action_new"
         android:title="@string/voir_new"
