@@ -1,13 +1,22 @@
 <resources>
 
-    <!-- Base application theme. -->
+    <!-- Base application theme.-->
     <style name="AppTheme" parent="android:Theme.Material">
-        <!-- Customize your theme here. -->
         <item name="android:colorPrimary">#3991b2</item>
         <item name="android:colorPrimaryDark">#2a7996</item>
         <item name="android:colorAccent">#609cb2</item>
         <item name="android:navigationBarColor">#3b8ead</item>
         <item name="android:textColorPrimary">#d1eaf4</item>
+        <item name="android:actionBarStyle">@style/AppActionBarStyle</item>
+        <item name="android:actionBarTabStyle">@style/AppTabStyle</item>
+    </style>
+
+    <style name="AppActionBarStyle" parent="@android:style/Widget.Material.ActionBar">
+        <item name="android:background">#3b8ead</item>
+    </style>
+
+    <style name="AppTabStyle" parent="@android:style/Widget.Material.ActionBar">
+        <item name="android:popupBackground">#3b8ead</item>
     </style>
 
 </resources>
